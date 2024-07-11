@@ -1,0 +1,14 @@
+material = [6000 2000 4000 9000];
+labor = [2000 5000 3000 7000];
+transportation = [1000 4000 2000 3000];
+quarterone = [10 8 12 6];
+quartertwo = [12 7 10 4];
+quarterthree = [13 6 13 11];
+quarterfour = [15 4 9 5];
+a = material.* quarterone , labor.* quarterone, transportation.*quarterone
+b = material.* quartertwo , labor.* quartertwo, transportation.*quartertwo
+c =  material.* quarterthree , labor.* quarterthree, transportation.*quarterthree
+d = material.* quarterfour , labor.* quarterfour, transportation.*quarterfour
+year = a + b + c + d
+totalperyear = sum(year)
+totalquarterlycosts = [sum(a) , sum(b) , sum(c) , sum(d)]
